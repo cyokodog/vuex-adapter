@@ -1,0 +1,34 @@
+{
+  "name": "vuex-typesafe-adapter-demo",
+  "version": "1.0.0",
+  "main": "public/index.js",
+  "types": "public/index.d.ts",
+  "scripts": {
+    "setup": "npm ci",
+    "prepare": "npm run build",
+    "build": "webpack --mode production",
+    "serve": "http-server"
+  },
+  "keywords": [],
+  "author": "cyokodog <cyokodog@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "ts-loader": "6.1.0",
+    "typescript": "3.6.3",
+    "vue-style-loader": "^4.1.2",
+    "webpack": "4.40.2",
+    "webpack-cli": "3.3.8"
+  },
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.1",
+    "vue-property-decorator": "^8.2.2",
+    "vue-template-compiler": "^2.6.10",
+    "vuex": "3.1.1"
+  }
+}

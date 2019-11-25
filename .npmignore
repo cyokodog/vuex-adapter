@@ -1,0 +1,6 @@
+src
+packages
+assets
+**/*.ts
+!**/*.d.ts
+.git
