@@ -15,7 +15,7 @@ npm run demo:serve
 
 http://localhost:8080
 
-![](./assets/demo.gif)
+![](https://raw.githubusercontent.com/cyokodog/vuex-adapter/master/assets/demo.gif)
 
 ## install
 
@@ -113,4 +113,4 @@ export default class Counter extends Vue {
 
 ### intelligence
 
-![](./assets/vuex-adapter.gif)
+![](https://raw.githubusercontent.com/cyokodog/vuex-adapter/master/assets/vuex-adapter.gif)
