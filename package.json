@@ -1,18 +1,12 @@
 {
   "name": "vuex-adapter",
   "version": "1.0.2",
+  "description": "A library that makes vuex type-safe.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "scripts": {
-    "setup": "npm ci & npm run demo:build",
-    "prepare": "npm run build",
-    "build": "webpack --mode production",
-    "demo:build": "cd packages/demo && npm run setup",
-    "demo:serve": "cd packages/demo && npm run serve"
+  "dependencies": {
+    "vuex": "3.1.1"
   },
-  "keywords": [],
-  "author": "cyokodog <cyokodog@gmail.com>",
-  "license": "MIT",
   "devDependencies": {
     "prettier": "^1.18.2",
     "ts-loader": "6.1.0",
@@ -20,7 +14,26 @@
     "webpack": "4.40.2",
     "webpack-cli": "3.3.8"
   },
-  "dependencies": {
-    "vuex": "3.1.1"
-  }
+  "scripts": {
+    "setup": "npm ci & npm run demo:build",
+    "prepare": "npm run build",
+    "build": "webpack --mode production",
+    "demo:build": "cd packages/demo && npm run setup",
+    "demo:serve": "cd packages/demo && npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyokodog/vuex-adapter.git"
+  },
+  "keywords": [
+    "vuex",
+    "vue.js",
+    "typescript"
+  ],
+  "author": "cyokodog <cyokodog@gmail.com> (https://www.cyokodog.net/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cyokodog/vuex-adapter/issues"
+  },
+  "homepage": "https://github.com/cyokodog/vuex-adapter#readme"
 }
