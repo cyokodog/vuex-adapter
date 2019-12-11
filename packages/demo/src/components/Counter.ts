@@ -9,13 +9,23 @@ const barStore = getBarAdapter();
 @Component
 export default class Counter extends Vue {
   get rootCount(): number {
-    // return this.$store.getters.count;
-    return rootStore.getters.count;
+    // return this.$store.state.count;
+    return rootStore.state.count;
+  }
+
+  get rootCountJP(): string {
+    // return this.$store.getters.countJP;
+    return rootStore.getters.countJP;
   }
 
   get barCount(): number {
-    // return this.$store.getters['bar/count'];
-    return barStore.getters.count;
+    // return this.$store.state.bar.count;
+    return barStore.state.count;
+  }
+
+  get barCountJP(): string {
+    // return this.$store.getters['bar/countJP'];
+    return barStore.getters.countJP;
   }
 
   rootCountUp() {

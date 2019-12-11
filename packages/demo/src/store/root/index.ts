@@ -1,4 +1,5 @@
 import { bar, barModulePath } from './modules/bar';
+import { JPNumber } from '../../jp-number';
 
 export const rootState = {
   count: 5,
@@ -8,8 +9,8 @@ export type RootState = typeof rootState;
 export const root = {
   state: rootState,
   getters: {
-    count(state: RootState) {
-      return state.count;
+    countJP(state: RootState) {
+      return JPNumber(state.count);
     },
   },
   mutations: {

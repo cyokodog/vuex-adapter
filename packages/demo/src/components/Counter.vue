@@ -3,9 +3,11 @@
     <fieldset>
       <legend>Root State</legend>
 
-      <button @click="rootCountDown">-</button>
-      <strong>{{ rootCount }}</strong>
-      <button @click="rootCountUp">+</button>
+      <div class="number-display">
+        <button @click="rootCountDown">-</button>
+        <strong>{{ rootCountJP }}<br/>{{ rootCount }}</strong>
+        <button @click="rootCountUp">+</button>
+      </div>
 
       <fieldset>
         <legend>Bar Module State</legend>
@@ -13,9 +15,11 @@
           <button @click="passCountToRoot">↑</button>
         </div>
 
+      <div class="number-display">
         <button @click="barCountDown">-</button>
-        <strong>{{ barCount }}</strong>
+        <strong>{{ barCountJP }}<br/>{{ barCount }}</strong>
         <button @click="barCountUp">+</button>
+      </div>
 
       </fieldset>
     </fieldset>
@@ -39,6 +43,7 @@ legend {
 button {
   padding: 10px 50px;
   margin: 10px;
+  vertical-align: text-bottom;
   font-size: 20px;
   border-radius: 4px;
   height: 50px;
@@ -47,5 +52,10 @@ button {
 
 strong {
   font-size: 35px;
+  text-align: center
+}
+
+.number-display > * {
+  display: inline-block
 }
 </style>

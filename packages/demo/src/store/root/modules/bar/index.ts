@@ -3,6 +3,7 @@ import { ActionContext } from 'vuex';
 import { RootState } from '../..';
 import { getRootAdapter } from '../../adapter';
 import { getBarAdapter } from './adapter';
+import { JPNumber } from '../../../../jp-number';
 
 const barState = {
   count: 10,
@@ -15,8 +16,8 @@ export const bar = {
   namespaced: true,
   state: barState,
   getters: {
-    count(state: BarState) {
-      return state.count;
+    countJP(state: BarState) {
+      return JPNumber(state.count);
     },
   },
   mutations: {
