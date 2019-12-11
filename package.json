@@ -1,6 +1,6 @@
 {
   "name": "vuex-adapter",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A library that makes vuex type-safe.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
