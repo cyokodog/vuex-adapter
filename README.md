@@ -15,7 +15,7 @@ npm run demo:serve
 
 http://localhost:8080
 
-![](https://raw.githubusercontent.com/cyokodog/vuex-adapter/master/assets/demo.gif)
+![](https://raw.githubusercontent.com/cyokodog/vuex-adapter/master/assets/vuex-adapter-demo-1.gif)
 
 ## install
 
@@ -38,8 +38,8 @@ export type RootState = typeof rootState;
 export const root = {
   state: rootState,
   getters: {
-    count(state: RootState) {
-      return state.count;
+    countJP(state: RootState) {
+      return JPNumber(state.count);
     },
   },
   mutations: {
@@ -67,8 +67,8 @@ export const bar = {
   namespaced: true,
   state: barState,
   getters: {
-    count(state: BarState) {
-      return state.count;
+    countJP(state: BarState) {
+      return JPNumber(state.count);
     },
   },
   ...
@@ -97,15 +97,28 @@ const barStore =  new VuexAdapter(store, bar, { modulePath: barModulePath });
 
 @Component
 export default class Counter extends Vue {
-  get rootCount() {
-    return rootStore.getters.count;
+  get rootCount(): number {
+    // return this.$store.state.count;
+    return rootStore.state.count;
   }
 
-  get barCount() {
-    return barStore.getters.count;
+  get rootCountJP(): string {
+    // return this.$store.getters.countJP;
+    return rootStore.getters.countJP;
+  }
+
+  get barCount(): number {
+    // return this.$store.state.bar.count;
+    return barStore.state.count;
+  }
+
+  get barCountJP(): string {
+    // return this.$store.getters['bar/countJP'];
+    return barStore.getters.countJP;
   }
 
   rootCountUp() {
+    // this.$store.commit('addCount', { qty: 1 });
     rootStore.committers.addCount({ qty: 1 });
   }
   ...
@@ -113,4 +126,4 @@ export default class Counter extends Vue {
 
 ### intelligence
 
-![](https://raw.githubusercontent.com/cyokodog/vuex-adapter/master/assets/vuex-adapter.gif)
+![](https://raw.githubusercontent.com/cyokodog/vuex-adapter/master/assets/vuex-adapter-demo-2.gif)
